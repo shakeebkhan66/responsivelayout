@@ -32,6 +32,7 @@ class _FloatingBottomNavigationBarScreenState extends State<FloatingBottomNaviga
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.red,
       body: pages[currentIndex],
       bottomNavigationBar: FloatingNavbar(
         borderRadius: 30,

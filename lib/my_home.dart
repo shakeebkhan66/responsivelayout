@@ -8,27 +8,31 @@ class MyHome extends StatefulWidget {
 }
 
 class _MyHomeState extends State<MyHome> {
+
+  String image = "https://a.ccdn.es/cnet/contents/media/own/2022/6/1299003.jpg";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.red,
       body: SafeArea(
-        child: ListView(
+        child: Column(
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 15.0),
               child: Align(
                 alignment: Alignment.topRight,
                   child: Icon(Icons.cancel, color: Colors.black, size: 30,)),
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 131),
             Container(
               padding: const EdgeInsets.only(top: 90),
-              decoration: const BoxDecoration(
-                  color: Colors.black,
-                borderRadius: BorderRadius.only(topLeft: Radius.circular(25), topRight: Radius.circular(25))
+              decoration: BoxDecoration(
+                  // color: Colors.black,
+                borderRadius: const BorderRadius.only(topLeft: Radius.circular(25), topRight: Radius.circular(25)),
+                image: DecorationImage(image: NetworkImage(image), fit: BoxFit.fill)
               ),
-              height: MediaQuery.of(context).size.height * 0.90,
+              height: MediaQuery.of(context).size.height * 0.60,
               width: MediaQuery.of(context).size.width,
             )
           ],
